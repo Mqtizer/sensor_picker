@@ -43,7 +43,9 @@ class SensorPicker extends StatelessWidget {
                   onSensorClicked!(currentSensor);
                 }
                 if (controller != null) {
-                  controller!.insertAtCursor(currentSensor.templateString);
+                  controller!.insertAtCursor(
+                    currentSensor.templateString,
+                  );
                 }
               },
               child: Column(
@@ -72,6 +74,8 @@ class SensorPicker extends StatelessWidget {
                   Text(
                     currentSensor.name,
                     overflow: TextOverflow.fade,
+                    softWrap: false,
+                    textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.labelMedium,
                   ),
                 ],
