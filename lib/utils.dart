@@ -14,6 +14,11 @@ extension EfficientTextEditingController on TextEditingController {
       selection:
           TextSelection.collapsed(offset: textSelection.start + text.length),
     );
+
+    // scroll to the end of the text
+    this.selection = TextSelection.fromPosition(
+      TextPosition(offset: this.text.length),
+    );
   }
 }
 
