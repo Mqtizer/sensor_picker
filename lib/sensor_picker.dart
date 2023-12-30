@@ -20,16 +20,16 @@ class SensorPicker extends StatelessWidget {
       alignment: WrapAlignment.center,
       crossAxisAlignment: WrapCrossAlignment.center,
       runSpacing: 8,
-      spacing: 8,
+      spacing: 16,
       children: defaultSensors
           .map(
             (currentSensor) => TextButton(
               style: ButtonStyle(
                 minimumSize: MaterialStateProperty.all(
-                  const Size(102, 102),
+                  const Size(120, 100),
                 ),
                 maximumSize: MaterialStateProperty.all(
-                  const Size(102, 102),
+                  const Size(120, 100),
                 ),
                 alignment: Alignment.center,
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -62,7 +62,7 @@ class SensorPicker extends StatelessWidget {
                     child: IconTheme(
                       data: Theme.of(context).iconTheme.copyWith(
                             color: Theme.of(context).colorScheme.onTertiary,
-                            size: 24.0,
+                            size: 28.0,
                           ),
                       child: Icon(
                         currentSensor.icon,

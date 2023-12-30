@@ -38,7 +38,7 @@ List<PickerSensor> defaultSensors = [
     Icons.speed_outlined,
     () async {
       try {
-        AccelerometerEvent event = await accelerometerEvents.first;
+        AccelerometerEvent event = await accelerometerEventStream().first;
         return '[${event.x.toStringAsFixed(2)}, ${event.y.toStringAsFixed(2)}, ${event.z.toStringAsFixed(2)}]';
       } catch (e) {
         return "-NA-";
@@ -50,7 +50,7 @@ List<PickerSensor> defaultSensors = [
     Icons.rotate_left_outlined,
     () async {
       try {
-        GyroscopeEvent event = await gyroscopeEvents.first;
+        GyroscopeEvent event = await gyroscopeEventStream().first;
         return '[${event.x.toStringAsFixed(2)}, ${event.y.toStringAsFixed(2)}, ${event.z.toStringAsFixed(2)}]';
       } catch (e) {
         return "-NA-";
@@ -61,7 +61,7 @@ List<PickerSensor> defaultSensors = [
     "magnetometer",
     Icons.explore_outlined,
     () async {
-      MagnetometerEvent event = await magnetometerEvents.first;
+      MagnetometerEvent event = await magnetometerEventStream().first;
       return '[${event.x.toStringAsFixed(2)}, ${event.y.toStringAsFixed(2)}, ${event.z.toStringAsFixed(2)}]';
     },
   ),
