@@ -7,13 +7,13 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  battery_info: ^1.1.1
+  battery_info_plugin: ^0.0.21
   flutter:
     sdk: flutter
-  sensors_plus: ^4.0.2
+  sensors_plus: ^6.1.1
 
 dev_dependencies:
-  flutter_lints: ^3.0.1
+  flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
 
